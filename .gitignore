@@ -176,6 +176,7 @@ train_ckpt*/
 pred*.npz
 submission*.zip
 *.zip
+*.cmd
 
 # Course/reference files kept locally but not needed for source review
 *.pdf

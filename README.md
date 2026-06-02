@@ -1,5 +1,7 @@
 # NYCU Visual Recognition HW4 - PromptIR Image Restoration
 
+## 周恭麟 314561002
+
 ## Introduction
 
 This repository implements a PromptIR-based image restoration pipeline for
@@ -326,4 +328,3 @@ The report should mention:
 - progressive larger-patch fine-tuning;
 - validation PSNR checkpoint selection;
 - final epoch-108 + x8 TTA-only inference;
-- public CodaBench score `30.80`.

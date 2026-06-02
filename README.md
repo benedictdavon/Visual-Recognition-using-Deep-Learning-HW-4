@@ -284,6 +284,8 @@ python src/average_checkpoints.py \
 
 Public CodaBench results from the latest notes:
 
+![Public leaderboard row for the selected final submission](figures/leaderboard.png)
+
 | Submission | Inference / Variant | Public PSNR |
 |---|---|---:|
 | `e108_tta_only..zip` | epoch 108 checkpoint + x8 TTA only | 30.80 |
@@ -295,6 +297,22 @@ Public CodaBench results from the latest notes:
 Conclusion: the current best public setting is the single epoch-108 checkpoint
 with x8 TTA only. Gaussian-overlap inference and the 105-110 model soup were
 useful ablations but were not selected as the final submission method.
+
+| Checkpoint / Epoch | Overall Val PSNR | Rain Val PSNR | Snow Val PSNR | Notes |
+|---|---:|---:|---:|---|
+| epoch 108 | 30.190 | 29.503 | 30.876 | selected final checkpoint |
+| epoch 110 | 30.188 | 29.502 | 30.874 | late checkpoint, slightly below epoch 108 |
+
+Additional report figures are saved under `figures/`:
+
+- `training_curve.png`: combined E034 validation PSNR curve from `metrics.csv`
+  through `metrics4.csv`;
+- `confusion_matrix.png`: rain/snow degradation-routing probe on the fixed
+  validation split, `[[157, 3], [0, 160]]`, accuracy `99.1%`;
+- `qualitative_results.png`: validation examples restored by epoch 108 with
+  x8 TTA;
+- `failure_cases.png`: representative difficult examples with restored output,
+  clean target, and error-map observations.
 
 ## Submission Checklist
 

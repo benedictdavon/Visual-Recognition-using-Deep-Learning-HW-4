@@ -179,6 +179,15 @@ The official submission file must contain:
 - array shape `(3, H, W)`;
 - values in `[0, 255]`.
 
+Check a generated prediction file before zipping or uploading:
+
+```powershell
+python tools/check_submission_npz.py `
+  output/runs/exp37_e029_long224_safe_structural/pred_e108_tta_only.npz `
+  --test_dir data/test/degraded `
+  --expected_count 100
+```
+
 ## Model Soup
 
 Average compatible checkpoints:
@@ -219,6 +228,7 @@ inference for the best E034 checkpoint.
 - Confirm `pred.npz` has exactly 100 keys.
 - Confirm keys match numeric test filenames.
 - Confirm arrays are `uint8` and CHW.
+- Run `tools/check_submission_npz.py` on the generated file.
 - Zip only `pred.npz` at the archive root.
 - Do not change checkpoint loading, EMA handling, TTA, Gaussian patch logic, or
   output format during cleanup.

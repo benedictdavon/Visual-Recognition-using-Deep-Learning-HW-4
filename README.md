@@ -314,18 +314,6 @@ Additional report figures are saved under `figures/`:
 - `failure_cases.png`: representative difficult examples with restored output,
   clean target, and error-map observations.
 
-## Submission Checklist
-
-Before final upload:
-
-1. Generate `pred.npz` with `tools/create_submission.py`.
-2. Run `tools/check_submission_npz.py`.
-3. Confirm there are exactly 100 keys.
-4. Confirm keys match `0.png` to `99.png`.
-5. Confirm arrays are CHW, `uint8`, and in `[0, 255]`.
-6. Zip only `pred.npz` at the archive root.
-7. Use the report/GitHub submission format required by the course.
-
 ## Report Notes
 
 The report should mention:

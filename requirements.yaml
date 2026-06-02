@@ -1,0 +1,38 @@
+name: prompt-ir
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core runtime
+  - python=3.10
+  - pip
+
+  # PyTorch GPU stack. Requires an NVIDIA driver compatible with CUDA 11.8.
+  # For CPU-only machines, remove pytorch-cuda and install cpuonly from pytorch.
+  - pytorch=2.2.*
+  - torchvision=0.17.*
+  - torchaudio=2.2.*
+  - pytorch-cuda=11.8
+
+  # Scientific / image-processing stack
+  - numpy=1.26.*
+  - scipy
+  - pillow
+  - opencv
+  - scikit-image
+  - matplotlib
+  - tqdm
+  - einops
+  - pyyaml
+  - packaging
+  - tensorboard
+  - gdown
+
+  # Keep Lightning in pip to avoid solver conflicts across Windows/Linux.
+  - pip:
+      - lightning==2.2.5
+      - pytorch-lightning==2.2.5
+      - torchmetrics==1.4.0.post0

@@ -1,4 +1,5 @@
 # NYCU Visual Recognition HW4 - PromptIR Image Restoration
+## 周恭麟 314561002
 
 ## Introduction
 
@@ -296,28 +297,4 @@ Conclusion: the current best public setting is the single epoch-108 checkpoint
 with x8 TTA only. Gaussian-overlap inference and the 105-110 model soup were
 useful ablations but were not selected as the final submission method.
 
-## Submission Checklist
-
-Before final upload:
-
-1. Generate `pred.npz` with `tools/create_submission.py`.
-2. Run `tools/check_submission_npz.py`.
-3. Confirm there are exactly 100 keys.
-4. Confirm keys match `0.png` to `99.png`.
-5. Confirm arrays are CHW, `uint8`, and in `[0, 255]`.
-6. Zip only `pred.npz` at the archive root.
-7. Use the report/GitHub submission format required by the course.
-
-## Report Notes
-
-The report should mention:
-
-- single PromptIR-based model;
-- trained from scratch;
-- official training data only;
-- fixed balanced validation split;
-- deeper/wider PromptIR variant;
-- progressive larger-patch fine-tuning;
-- validation PSNR checkpoint selection;
-- final epoch-108 + x8 TTA-only inference;
 - public CodaBench score `30.80`.

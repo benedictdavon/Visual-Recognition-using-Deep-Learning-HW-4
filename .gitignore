@@ -163,6 +163,7 @@ cython_debug/
 # HW4 local data and generated experiment artifacts
 data/
 datasets/
+docs/
 kaggle_working/
 logs/
 output/

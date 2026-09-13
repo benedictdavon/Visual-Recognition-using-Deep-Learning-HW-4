@@ -1,6 +1,8 @@
 # NYCU Visual Recognition HW4 - PromptIR Image Restoration
 
-## 周恭麟 314561002
+> Canonical portfolio entry point: [NYCU Visual Recognition using Deep Learning 2026](https://github.com/benedictdavon/nycu-visual-recognition-using-deep-learning-2026/tree/master/hw4-promptir-image-restoration). This repository is the historical standalone project snapshot.
+
+## 周恭麟
 
 ## Introduction
 
